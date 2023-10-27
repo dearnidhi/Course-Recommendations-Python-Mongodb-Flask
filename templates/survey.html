@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey for MSc. Computer Science Students</title>
+    <link rel="stylesheet" href="static/survey.css">
+</head>
+<body>
+    <form action="submit_survey" method="POST" class="survey-form">
+        <h2 class="form-title">Survey for MSc. Computer Science Students</h2>
+
+        <!-- Coding Interests -->
+        <div class="form-section">
+            <label class="label">What are your coding interests?</label>
+            <select name="codingInterests" class="select">
+                <option value="" disabled>Select one</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Databases and Search">Databases and Search</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Algorithms and Computers">Algorithms and Computers</option>
+                <!-- Add more coding interests as needed -->
+            </select>
+        </div>
+
+        <!-- Favorite Programming Language -->
+        <div class="form-section">
+            <label class="label">What is your favorite programming language?</label>
+            <select name="favoriteLanguage" class="select">
+                <option value="" disabled>Select one</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <!-- Experience Level -->
+        <div class="form-section">
+            <label class="label">What is your experience level?</label>
+            <select name="experienceLevel" class="select">
+                <option value="" disabled>Select one</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+        </div>
+
+        <!-- Preferred Industry -->
+        <div class="form-section">
+            <label class="label">What industry do you prefer to work in?</label>
+            <select name="preferredIndustry" class="select">
+                <option value="" disabled>Select one</option>
+                <option value="Tech">Tech</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Finance">Finance</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <!-- Learning Resources -->
+        <div class="form-section">
+            <label class="label">What resources do you use for learning?</label>
+            <div class="checkbox-options">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="learningResources1" value="Books">
+                    Books
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="learningResources2" value="Online Courses">
+                    Online Courses
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="learningResources3" value="YouTube">
+                    YouTube
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="learningResources4" value="Blogs">
+                    Blogs
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="learningResources5" value="Podcasts">
+                    Podcasts
+                </label>
+                <!-- Add more learning resources as needed -->
+            </div>
+        </div>
+
+        <!-- Preferred Work Environment -->
+        <div class="form-section">
+            <label class="label">Preferred Work Environment</label>
+            <select name="workEnvironment" class="select">
+                <option value="" disabled>Select one</option>
+                <option value="Corporate">Corporate</option>
+                <option value="Startup">Startup</option>
+                <option value="Freelance">Freelance</option>
+                <option value="Academia">Academia</option>
+                <option value="Non-Profit">Non-Profit</option>
+            </select>
+        </div>
+
+        <!-- Long-term Career Goals and Interests -->
+        <div class="form-section">
+            <label class="label">Long-term Career Goals and Interests</label>
+            <textarea name="longTermGoals" class="textarea" rows="4" placeholder="Describe your long-term career goals and interests, this will help us lay out a customized career plan personalized for you."></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Complete Survey</button>
+    </form>
+</body>
+</html>

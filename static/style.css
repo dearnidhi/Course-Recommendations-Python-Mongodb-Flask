@@ -1,0 +1,85 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Title style */
+h1 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Recommended course list styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mandatory subjects list styles */
+ul ul {
+    padding-left: 20px;
+}
+
+/* Learn more button style */
+a.learn-more-button {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+a.learn-more-button:hover {
+    background-color: #0056b3;
+}
+
+/* Updated styles for the Logout icon and text */
+.logout-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.logout-icon:hover {
+    background-color: #0056b3;
+}
+
+/* Style for Log Out text */
+.logout-text {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Center the Logout icon and text */
+.logout-icon,
+.logout-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Adjustments to improve readability */
+h2, h3, h4, h5 {
+    margin: 10px 0;
+}

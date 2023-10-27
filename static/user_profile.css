@@ -1,0 +1,79 @@
+/* Body background with a gradient */
+body {
+    background: linear-gradient(to right, #9ebde1, #afc9f4);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Center-align the heading */
+h2 {
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+    color: #007bff;
+}
+
+/* Decorate the "Survey Responses" section */
+h3 {
+    margin-top: 20px;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* Body text with slightly increased line-height for readability */
+p {
+    line-height: 1.6;
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Form input fields */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button with a gradient background */
+input[type="submit"] {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Decorate the "Edit Profile" link */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+a:hover {
+    background: #0056b3;
+}

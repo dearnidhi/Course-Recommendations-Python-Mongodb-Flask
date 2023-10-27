@@ -1,0 +1,85 @@
+/* Reset some default styles */
+html, body, h1, h2, p, ul, li, form {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set some basic styling for the body */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #2980B9, #6DD5FA); /* Gradient background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Center the form on the page */
+.survey-form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+/* Style the form title */
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style form sections */
+.form-section {
+  margin: 20px 0;
+}
+
+/* Style labels */
+.label {
+  display: block;
+  font-weight: bold;
+}
+
+/* Style select inputs */
+.select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style checkbox labels */
+.checkbox-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Style textarea input */
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the submit button */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #3498DB; /* Blue background color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the button when hovered */
+.submit-button:hover {
+  background: #2980B9; /* Slightly darker blue on hover */
+}

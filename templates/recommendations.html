@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Your head content here -->
+
+    <div class="logout-icon" onclick="logout()">
+        <i class="fa fa-sign-out"></i>
+        <span class="logout-text">Log Out</span>
+    </div>
+
+    <script>
+        function logout() {
+            window.location.href = "/logout";
+        }
+    </script>
+
+
+
+
+    <title>Course Recommendations</title>
+</head>
+
+<body>
+    <h1>Recommended Courses</h1>
+
+    <ul>
+        {% set user_semester_numeric = user_semester.split()[1] | int %}
+        {% for course in courses %}
+        {% set course_semester_numeric = course['semester'].split()[1] | int %}
+        {% if course_semester_numeric >= user_semester_numeric %}
+
+        {% if course['course_name'] == user_course_name or course['course_name'] == 'default' %}
+        <li>
+            <h2>{{ course['semester'] }}</h2>
+            {% if course['course_name'] != 'default' %}
+            <h3>{{ course['course_name'] }}</h3>
+            {% endif %}
+            <!-- Display Mandatory Subjects -->
+            <h4>Mandatory Subjects:</h4>
+            <ul>
+                {% for subject in course['mandatory_subjects'] %}
+                <li>
+                    <h5>{{ subject['subject_name'] }} ({{ subject['course_code'] }})</h5>
+                    <p>{{ subject['description'] }}</p>
+                    <a href="{{ subject['course_link'] }}" class="learn-more-button">Learn More</a>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <!-- Display Choose One Subjects (Option 1) if needed -->
+            
+            {% if course['choose_1_subjects']|length > 0 %}
+                <h4>Choose One Subject (Option 1):</h4>
+                <ul>
+                    {% for subject in course['choose_1_subjects'] %}
+                    <li>
+                        <h5>{{ subject['subject_name'] }} ({{ subject['course_code'] }})</h5>
+                        <p>{{ subject['description'] }}</p>
+                        <a href="{{ subject['course_link'] }}" class="learn-more-button">Learn More</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            
+
+            <!-- Display Choose Two Subjects (Option 2) if needed -->
+            {% if course['choose_2_subjects']|length > 0 %}
+            <h4>Choose Two Subjects (Option 2):</h4>
+            <ul>
+                {% for subject in course['choose_2_subjects'] %}
+                <li>
+                    <h5>{{ subject['subject_name'] }} ({{ subject['course_code'] }})</h5>
+                    <p>{{ subject['description'] }}</p>
+                    <a href="{{ subject['course_link'] }}" class="learn-more-button">Learn More</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            
+        </li>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
